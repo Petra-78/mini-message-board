@@ -1,0 +1,147 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+.main {
+  padding: 30px;
+  background-color: #ffffffcc;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #2d3436;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #555;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+li {
+  list-style: none;
+}
+
+.user-info {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+li > div {
+  color: #2d3436;
+  font-weight: 400;
+}
+
+li .date {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: right;
+}
+
+li.message {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  word-wrap: break-word;
+  transition: transform 0.2s;
+  max-width: max-content;
+}
+
+li.message:hover {
+  transform: translateY(-2px);
+}
+
+a button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #70e1f5, #ffd194);
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+a button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #ffd194, #70e1f5);
+}
+
+/*form style*/
+
+form {
+  background-color: #ffffffcc;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-weight: 600;
+  color: #2d3436;
+}
+
+input[type="text"] {
+  padding: 12px 15px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #ff6f91;
+  box-shadow: 0 4px 10px rgba(255, 111, 145, 0.2);
+}
+
+button[type="submit"] {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #70e1f5, #ffd194);
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #ffd194, #70e1f5);
+}
