@@ -5,6 +5,7 @@ const newRouter = require("./routes/newRouter");
 const indexRouter = require("./routes/indexRouter");
 
 app.use(express.static("public"));
+app.use("/assets", express.static(path.join(__dirname, "assets")));
 app.use(express.urlencoded({ extended: true }));
 
 app.set("views", path.join(__dirname, "views"));
