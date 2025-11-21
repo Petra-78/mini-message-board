@@ -83,6 +83,7 @@ li.message {
   word-wrap: break-word;
   transition: transform 0.2s;
   max-width: max-content;
+  line-height: 1.5;
 }
 
 li.message:hover {
