@@ -22,6 +22,9 @@ body {
   width: 90%;
   border-radius: 20px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -36,6 +39,19 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 15px;
+
+  overflow-y: auto;
+  padding-right: 10px;
+  flex: 1;
+}
+
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
 }
 
 li {
