@@ -11,7 +11,7 @@
   <body>
     <div class="main">
       <h1>Mini message board</h1>
-      <ul>
+      <ul id="messages">
         <% for (let i=0; i < messages.length; i++) { %>
         <div>
           <li class="user-info">
@@ -26,5 +26,14 @@
         <button>+ New message</button>
       </a>
     </div>
+
+    <script>
+      window.onload = function () {
+        const messagesEl = document.getElementById("messages");
+        if (messagesEl) {
+          messagesEl.scrollTop = messagesEl.scrollHeight;
+        }
+      };
+    </script>
   </body>
 </html>
