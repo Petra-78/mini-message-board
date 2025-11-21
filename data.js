@@ -1,7 +1,7 @@
 const messages = [
   {
-    text: "Hi there!",
-    user: "Amando",
+    text: "Hello!",
+    user: "Petra-78",
     date: new Date().toLocaleString("en-GB", {
       day: "2-digit",
       month: "short", // "Feb"
@@ -11,8 +11,8 @@ const messages = [
     }),
   },
   {
-    text: "Hello World!",
-    user: "Charles",
+    text: "Welcome to my Mini Message Board! Write a note, share your thoughts, or just leave a quick hello :)",
+    user: "Petra-78",
     date: new Date().toLocaleString("en-GB", {
       day: "2-digit",
       month: "short",
