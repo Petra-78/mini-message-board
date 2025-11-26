@@ -1,9 +1,11 @@
 const { Router } = require("express");
 const router = Router();
-const messages = require("../data");
+const db = require("../db/queries");
 
-router.get("/", (req, res) => {
-  res.render("index", { messages: messages });
+router.get("/", async (req, res) => {
+  const messages = await db.getAllMessages();
+  console.log(messages);
+  res.render("index", { messages });
 });
 
 module.exports = router;
