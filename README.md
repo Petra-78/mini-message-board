@@ -1,6 +1,6 @@
 # Mini Message Board
 
-A fun, lightweight message board built with Node.js, Express, and EJS. Users can post messages with their username and see messages from others in real time.
+A fun, lightweight message board built with Node.js, Express, PostgreSQL and EJS. Users can post messages with their username and see messages from others in real time.
 
 Live preview: https://mini-message-board-production-1f0a.up.railway.app/
 
