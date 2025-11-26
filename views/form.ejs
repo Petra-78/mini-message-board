@@ -9,11 +9,35 @@
   </head>
   <body>
     <form method="POST" action="/new">
-      <label for="user">Username</label>
-      <input type="text" name="userName" id="user" />
+      <label for="user">Username *</label>
+      <input
+        type="text"
+        name="username"
+        id="user"
+        minlength="2"
+        maxlength="20"
+        required
+        value="<%= inputData ? inputData.username : '' %>"
+      />
 
-      <label for="message">Message</label>
-      <input type="text" name="message" id="message" />
+      <label for="message">Message *</label>
+      <input
+        type="text"
+        name="message"
+        id="message"
+        minlength="1"
+        maxlength="300"
+        required
+        value="<%= inputData ? inputData.message : '' %>"
+      />
+
+      <% if (errors) { %>
+      <ul>
+        <% errors.forEach(err => { %>
+        <li style="color: red"><%= err.msg %></li>
+        <% }) %>
+      </ul>
+      <% } %>
 
       <button type="submit">Submit</button>
     </form>
