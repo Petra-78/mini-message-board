@@ -35,9 +35,6 @@ async function main() {
   console.log("seeding...");
   const client = new Client({
     connectionString: process.env.DATABASE_URL,
-    ssl: process.env.DATABASE_URL.includes("railway.app")
-      ? { rejectUnauthorized: false }
-      : false,
   });
   await client.connect();
   await client.query(SQL);
