@@ -1,10 +1,8 @@
 #! /usr/bin/env node
-
+require("dotenv").config();
 const { Client } = require("pg");
 
 const SQL = `
-TRUNCATE TABLE messages RESTART IDENTITY;
-
 CREATE TABLE IF NOT EXISTS messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   username VARCHAR ( 255 ),
