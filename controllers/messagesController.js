@@ -16,7 +16,7 @@ const validateMessage = [
 
 const postUploadMessages = [
   validateMessage,
-  (req, res) => {
+  async (req, res) => {
     const errors = validationResult(req);
     const inputData = req.body;
     console.log(inputData);
@@ -30,8 +30,13 @@ const postUploadMessages = [
     const { username, message } = matchedData(req);
     const date = new Date();
 
-    db.addMessage(username, message, date);
-    res.redirect("/");
+    try {
+      await db.addMessage(username, message, date);
+      res.redirect("/");
+    } catch (err) {
+      console.error("DB error:", err);
+      res.status(500).send("Internal Server Error at addMessage");
+    }
   },
 ];
 
@@ -43,9 +48,14 @@ function renderForm(req, res) {
 }
 
 async function renderMessages(req, res) {
-  const messages = await db.getAllMessages();
-  console.log(messages);
-  res.render("index", { messages });
+  try {
+    const messages = await db.getAllMessages();
+    console.log(messages);
+    res.render("index", { messages: messages });
+  } catch (err) {
+    console.error("DB error:", err);
+    res.status(500).send("Internal Server Error at rendermessages");
+  }
 }
 
 module.exports = {
