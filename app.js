@@ -16,7 +16,6 @@ app.use("/", indexRouter);
 
 app.use("/new", newRouter);
 
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`app listening on ${PORT}`);
+app.listen(process.env.PORT, () => {
+  console.log(`app listening on ${process.env.PORT}`);
 });
