@@ -16,7 +16,10 @@ app.use("/", indexRouter);
 
 app.use("/new", newRouter);
 
-const PORT = process.env.PORT || 3000;
+console.log("PORT:", process.env.PORT);
+console.log("DATABASE_URL:", process.env.DATABASE_URL ? "set" : "NOT set");
+
+const PORT = process.env.PORT;
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`app listening on ${PORT}`);
 });
